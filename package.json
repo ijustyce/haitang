@@ -7,7 +7,7 @@
   "packageManager": "yarn@1.22.19",
   "scripts": {
     "dev": "yarn build_search && yarn build_date && astro dev",
-    "build": "yarn build_search && yarn build_date && astro build",
+    "build": "NODE_ENV=production && yarn build_search && yarn build_date && astro build",
     "preview": "astro preview",
     "format": "prettier -w ./src",
     "generate": "drizzle-kit generate:sqlite",
