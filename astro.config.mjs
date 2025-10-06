@@ -10,17 +10,19 @@ import config from "./src/config/config.json";
 import icon from "astro-icon";
 import partytown from "@astrojs/partytown";
 
-import vercel from "@astrojs/vercel/serverless";
+import node from "@astrojs/node";
 
 // https://astro.build/config
 export default defineConfig({
   output: 'server',
-  adapter: vercel(),
+  adapter: node({
+    mode: "standalone"
+  }),
   site: config.site.base_url,
   base: config.site.base_path ? config.site.base_path : "/",
   trailingSlash: config.site.trailing_slash ? "always" : "never",
   image: {
-    service: squooshImageService()
+    service: squooshImageService(),
   },
   integrations: [react(), sitemap(), tailwind({
     config: {
@@ -40,6 +42,7 @@ export default defineConfig({
   })
   // solidJs()
   ],
+
   markdown: {
     remarkPlugins: [remarkToc, [remarkCollapse, {
       test: "Table of contents"
