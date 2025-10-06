@@ -1,5 +1,5 @@
 ---
-enable: true
+enable: false
 title: "古诗词的数字桃源"
 # title: "古韵今风，海棠诗梦间"
 description: "海棠诗社之核心功能"

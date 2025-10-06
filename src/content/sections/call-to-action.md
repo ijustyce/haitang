@@ -1,5 +1,5 @@
 ---
-enable: true
+enable: false
 # title: "此情此景，想不想吟诗一首?"
 title: "心动不如行动，赶紧加入诗社!"
 image: "/images/call-to-action.png"
